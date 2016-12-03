@@ -26,10 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>// create the objects needed in the first level
-instance_create(750, 350, obj_start);
+//instance_create(750, 350, obj_start);
 if(!instance_exists(obj_bg_music)){
     instance_create(0,0,obj_bg_music);
 }
+
+obj_lever.visible = true;
+obj_player.visible = true;
+obj_pause.visible = true;
 </string>
           </argument>
         </arguments>

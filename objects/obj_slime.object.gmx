@@ -25,10 +25,36 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
-image_speed = 0.5;
+            <string>//event_inherited();
+
+hp = 1;
+image_speed = 0.3;
 path_start(pth_monster_1, 4, path_action_reverse, false);
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>score+=30;
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -53,7 +79,14 @@ path_start(pth_monster_1, 4, path_action_reverse, false);
             <kind>1</kind>
             <string>///Move towards player
 //event_inherited();
+//script_execute(state);
 
+if (hp &lt;=0){
+    sprite_index = spr_slime_die;
+    if(alarm[2] == -1){
+        alarm[2] = room_speed/2;    
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -76,7 +109,15 @@ path_start(pth_monster_1, 4, path_action_reverse, false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///
+            <string>/// Damage the player
+    if(sprite_index != spr_slime_die){
+        with(obj_player){
+            instance_destroy();
+        }
+        room_restart();
+        instance_create(420, 480, obj_player);
+        obj_player.visible = true;
+    }
 </string>
           </argument>
         </arguments>
@@ -96,6 +137,6 @@ path_start(pth_monster_1, 4, path_action_reverse, false);
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
     <point>50,50</point>
-    <point>50,50</point>
+    <point>34,50</point>
   </PhysicsShapePoints>
 </object>

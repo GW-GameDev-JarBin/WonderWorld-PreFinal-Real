@@ -3,7 +3,7 @@
 if (instance_exists(obj_player)){
     var dir = point_direction(x,y, obj_player.x, obj_player.y);
     var dis = point_distance(x,y, obj_player.x, obj_player.y);
-    if (dis < sight){
+    if (dis <= sight){
         //if(instance_exists(obj_boss)){
           //  state = scr_enemy_idel_state;
         //}else{

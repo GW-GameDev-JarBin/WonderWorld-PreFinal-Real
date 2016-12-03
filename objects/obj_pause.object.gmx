@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>paused = 0;
-visible = false;
+visible = true;
 </string>
           </argument>
         </arguments>
@@ -50,6 +50,7 @@ visible = false;
           <argument>
             <kind>1</kind>
             <string>x = view_xview[0] + 1184;
+y = view_yview[0];
 </string>
           </argument>
         </arguments>

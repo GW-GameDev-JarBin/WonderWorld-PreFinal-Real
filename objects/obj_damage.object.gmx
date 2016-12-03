@@ -96,6 +96,6 @@ alarm[0] = 1;
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
     <point>128,128</point>
-    <point>160,16</point>
+    <point>112,16</point>
   </PhysicsShapePoints>
 </object>

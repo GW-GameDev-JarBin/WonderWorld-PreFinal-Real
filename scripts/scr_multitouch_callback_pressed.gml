@@ -76,6 +76,7 @@ if (instance_exists(obj_dash))
 
 }
 
+/*
 if (instance_exists(obj_lever))
 {
     //x = obj_attack.x;
@@ -116,6 +117,7 @@ if (instance_exists(obj_lever))
             obj_player.act = false
         }
         */
+        /*
     }
 }
-
+*/

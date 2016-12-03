@@ -41,16 +41,38 @@
     </sprites>
     <sprite>sprites\spr_trap</sprite>
     <sprite>sprites\spr_training</sprite>
+    <sprite>sprites\spr_training_die</sprite>
     <sprite>sprites\spr_map</sprite>
     <sprite>sprites\spr_pause</sprite>
     <sprite>sprites\spr_resume</sprite>
     <sprite>sprites\spr_fireball</sprite>
     <sprite>sprites\spr_fly</sprite>
     <sprite>sprites\spr_slime</sprite>
+    <sprite>sprites\spr_slime_die</sprite>
     <sprite>sprites\spr_boss</sprite>
     <sprite>sprites\spr_zombie</sprite>
     <sprite>sprites\spr_prince</sprite>
     <sprite>sprites\spr_multi_touch</sprite>
+    <sprite>sprites\spr_prince_free</sprite>
+    <sprite>sprites\spr_key</sprite>
+    <sprite>sprites\spr_zombie_die</sprite>
+    <sprite>sprites\spr_play</sprite>
+    <sprite>sprites\spr_levels</sprite>
+    <sprites name="spr_level_choosers">
+      <sprite>sprites\sprite40_lvl8</sprite>
+      <sprite>sprites\sprite41_lvl9</sprite>
+      <sprite>sprites\sprite42_lvl10</sprite>
+      <sprite>sprites\sprite43_lvl1</sprite>
+      <sprite>sprites\sprite44_lvl2</sprite>
+      <sprite>sprites\sprite45_lvl3</sprite>
+      <sprite>sprites\sprite46_lvl4</sprite>
+      <sprite>sprites\sprite47_lvl5</sprite>
+      <sprite>sprites\sprite48_lvl6</sprite>
+      <sprite>sprites\sprite49_lvl7</sprite>
+    </sprites>
+    <sprite>sprites\spr_replay</sprite>
+    <sprite>sprites\spr_win_player</sprite>
+    <sprite>sprites\spr_fly_die</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_2</background>
@@ -64,6 +86,8 @@
     <background>background\bg_8</background>
     <background>background\bg_9</background>
     <background>background\bg_10</background>
+    <background>background\bg_opening</background>
+    <background>background\background12</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_monster_1</path>
@@ -76,6 +100,7 @@
     <script>scripts\scr_dash_state_level_10.gml</script>
     <script>scripts\scr_dash_state.gml</script>
     <script>scripts\scr_attack_state.gml</script>
+    <script>scripts\scr_on_destroy.gml</script>
     <scripts name="gwgamedev_multitouch">
       <script>scripts\scr_multitouch_create.gml</script>
       <script>scripts\scr_multitouch_step.gml</script>
@@ -104,7 +129,6 @@
   <objects name="objects">
     <object>objects\obj_attack</object>
     <object>objects\obj_dash</object>
-    <object>objects\obj_player</object>
     <object>objects\obj_lever</object>
     <object>objects\obj_start</object>
     <object>objects\obj_block_wall</object>
@@ -147,13 +171,22 @@
     <object>objects\obj_bg_music</object>
     <object>objects\obj_dash_effect</object>
     <object>objects\obj_gameover</object>
+    <object>objects\obj_player</object>
     <object>objects\obj_boss</object>
     <object>objects\obj_fireball</object>
     <object>objects\obj_slime</object>
     <object>objects\obj_multi_touch</object>
     <object>objects\obj_prince</object>
+    <object>objects\obj_score</object>
+    <object>objects\obj_prince_free</object>
+    <object>objects\obj_key</object>
+    <object>objects\obj_play</object>
+    <object>objects\obj_levels</object>
+    <object>objects\obj_replay</object>
+    <object>objects\obj_win_player</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_opening</room>
     <room>rooms\rm_level_chooser</room>
     <room>rooms\level_1</room>
     <room>rooms\level_2</room>

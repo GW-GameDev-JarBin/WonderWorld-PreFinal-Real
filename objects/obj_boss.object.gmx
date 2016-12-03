@@ -26,14 +26,38 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-image_speed = 0.5;
+image_speed = 0.2;
 //path_start(pth_monster_1, 2, path_action_reverse, false);
 state = scr_enemy_idel_state;
 alarm[0] = room_speed*irandom_range(1,4);
 //alarm[2] = room_speed*irandom_range(4,6);
-sight = 400;
+sight = 200;
 target_x = 0;
 target_y = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>score += 50;
+instance_create(obj_boss.x, obj_boss.y, obj_key);
 </string>
           </argument>
         </arguments>
@@ -57,6 +81,29 @@ target_y = 0;
           <argument>
             <kind>1</kind>
             <string>///Alarm Firbeball attack
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///stall
 </string>
           </argument>
         </arguments>
@@ -105,6 +152,42 @@ target_y = 0;
             <string>///Move towards player
 event_inherited();
 script_execute(state);
+if(hp &lt;= 0){
+    instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_player">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Damage the player
+if (state != scr_enemy_stall_state){
+    state = scr_enemy_stall_state;
+    alarm[1] = room_speed;
+        with(obj_player){
+            instance_destroy();
+        }
+        room_restart();
+        instance_create(420, 480, obj_player);
+        obj_player.visible = true;
+}
 </string>
           </argument>
         </arguments>
