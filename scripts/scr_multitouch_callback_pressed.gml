@@ -18,9 +18,10 @@ if (instance_exists(obj_attack))
     obj_attack.x + 85, obj_attack.y + 85)
     {
         // attack button is pressed
-        obj_player.act = true
-        //obj_player.image_speed = 0.2;
-        script_execute(scr_attack_state);
+        //obj_player.act = true
+        obj_player.image_speed = 0.2;
+        obj_player.state = scr_attack_state;
+        script_execute(obj_player.state);
         //state = scr_move_state;
         audio_play_sound(snd_sword_swing, 10, false);
         
@@ -80,44 +81,52 @@ if (instance_exists(obj_dash))
 if (instance_exists(obj_lever))
 {
     //x = obj_attack.x;
-    user_x = touch_previous_x;
-    user_y = touch_previous_y;
+    user_x = touch_x;
+    user_y = touch_y;
     
+    if point_in_rectangle(user_x, user_y, 
+    obj_lever.x - 120, obj_lever.y - 120, 
+    obj_lever.x + 120, obj_lever.y + 120)
+    {
+        dis = point_distance(obj_lever.x, obj_lever.y, user_x, user_y) 
+        if(instance_exists(obj_player))
+        {  
+            // distance test
   
-    dis = point_distance(obj_lever.x, obj_lever.y, user_x, user_y) 
-    if(instance_exists(obj_player)){  
-    // distance test
-  
-        if (dis >= 32 && dis <= 160)
-        {
-            obj_lever.image_index = 1
+            if (dis >= 32 && dis <= 160)
+            {
+                obj_lever.image_index = 1
         
-            // address mouse
-            global.dir = floor(point_direction(obj_lever.x, obj_lever.y, user_x, user_y))  
+                // address mouse
+                global.dir = floor(point_direction(obj_lever.x, obj_lever.y, user_x, user_y))  
         
-            // inclination angle
-            obj_lever.image_angle = global.dir 
+                // inclination angle
+                obj_lever.image_angle = global.dir 
         
-            obj_player.act = true
-            obj_player.image_speed = 0.2;
-        }
-     
-        
-    
-        /*
-        else 
-        {
-            // if the mouse is not far enough to pull the lever
-            obj_lever.image_index = 0
+                obj_player.act = true
+               
+                obj_player.image_speed = 0.2;
+            }
+            else 
+            {
+                // if the mouse is not far enough to pull the lever
+                obj_lever.image_index = 0
+                
+                // nightmare code 
+                obj_player.image_speed = 0;
+                
+                obj_player.image_index = 0;
             
-            obj_player.image_speed = 0;
+                //if (obj_player
+                global.dir = 0
         
-            global.dir = 0
+                obj_player.act = false
+            }
         
-            obj_player.act = false
         }
-        */
-        /*
     }
+    
+
 }
 */
+

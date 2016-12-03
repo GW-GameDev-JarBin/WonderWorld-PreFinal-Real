@@ -21,48 +21,56 @@
     
     //dis = point_distance(obj_lever.x, obj_lever.y, user_x, user_y) 
     //if (dis >= 32 && dis <= 160)
-   if (instance_exists(obj_lever))
-   {
-    //x = obj_attack.x;
-    user_x = touch_x;
-    user_y = touch_y;
     
-  
-    dis = point_distance(obj_lever.x, obj_lever.y, user_x, user_y) 
-    if(instance_exists(obj_player)){  
-    // distance test
-  
-        if (dis >= 32 && dis <= 160)
-        {
-            obj_lever.image_index = 1
-        
-            // address mouse
-            global.dir = floor(point_direction(obj_lever.x, obj_lever.y, user_x, user_y))  
-        
-            // inclination angle
-            obj_lever.image_angle = global.dir 
-        
-            obj_player.act = true
-            obj_player.image_speed = 0.2;
-        }
-     
-        
+    if (instance_exists(obj_lever))
+    {
+        //x = obj_attack.x;
+        user_x = touch_x;
+        user_y = touch_y;
     
-        /*
-        else 
+        if point_in_rectangle(user_x, user_y, 
+        obj_lever.x - 120, obj_lever.y - 120, 
+        obj_lever.x + 120, obj_lever.y + 120)
         {
-            // if the mouse is not far enough to pull the lever
-            obj_lever.image_index = 0
+            dis = point_distance(obj_lever.x, obj_lever.y, user_x, user_y) 
+            if(instance_exists(obj_player))
+            {  
+                // distance test
+  
+                if (dis >= 32 && dis <= 160)
+                {
+                    obj_lever.image_index = 1
+        
+                    // address mouse
+                    global.dir = floor(point_direction(obj_lever.x, obj_lever.y, user_x, user_y))  
+        
+                    // inclination angle
+                    obj_lever.image_angle = global.dir 
+        
+                    obj_player.act = true
+               
+                    obj_player.image_speed = 0.2;
+                }
+                else 
+                {
+                    // if the mouse is not far enough to pull the lever
+                    obj_lever.image_index = 0
+                
+                    // nightmare code 
+                    obj_player.image_speed = 0;
+                
+                    obj_player.image_index = 0;
             
-            obj_player.image_speed = 0;
+                    //if (obj_player
+                    global.dir = 0
         
-            global.dir = 0
+                    obj_player.act = false
+                }
         
-            obj_player.act = false
+            }
         }
-        */
     }
-}
+
 
     
     // } Customize until here 

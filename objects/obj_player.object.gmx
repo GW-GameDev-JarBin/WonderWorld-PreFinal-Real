@@ -73,24 +73,71 @@ if (hp &lt;=0){
 
 if (floor(image_index) == 4 and sprite_index == spr_female_attack_right)
 {
-    obj_player.sprite_index = spr_female_right;
+    sprite_index = spr_female_right;
+    image_index = 0;
+    
+    if (obj_lever.image_index == 0)
+    {
+        image_speed = 0;
+        state = scr_move_state;
+    }
+    else
+    {
+        state = scr_move_state;
+    }
+    
+    
 }
 
 if (floor(image_index) == 4 and sprite_index == spr_female_attack_left)
 {
     obj_player.sprite_index = spr_female_left;
+    image_index = 0;
+    
+    if (obj_lever.image_index == 0)
+    {
+        image_speed = 0;
+        state = scr_move_state;
+    }
+    else
+    {
+        state = scr_move_state;
+    }
 }
 
 if (floor(image_index) == 4 and sprite_index == spr_female_attack_up)
 {
     obj_player.sprite_index = spr_female_up;
+    image_index = 0;
+    
+    if (obj_lever.image_index == 0)
+    {
+        image_speed = 0;
+        state = scr_move_state;
+    }
+    else
+    {
+        state = scr_move_state;
+    }
 }
 
 if (floor(image_index) == 4 and sprite_index == spr_female_attack_down)
 {
     obj_player.sprite_index = spr_female_down;
+    
+   
+    image_index = 0;
+    
+    if (obj_lever.image_index == 0)
+    {
+        image_speed = 0;
+        state = scr_move_state;
+    }
+    else
+    {
+        state = scr_move_state;
+    }
 }
-
 
 if (instance_exists(obj_trap)){
       

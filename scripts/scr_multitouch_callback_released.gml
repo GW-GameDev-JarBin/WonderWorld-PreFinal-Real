@@ -1,3 +1,4 @@
+/*
 if (instance_exists(obj_lever))
 {
     obj_lever.image_index = 0
@@ -8,3 +9,5 @@ if (instance_exists(obj_lever))
         
     obj_player.act = false
 }
+
+*/
