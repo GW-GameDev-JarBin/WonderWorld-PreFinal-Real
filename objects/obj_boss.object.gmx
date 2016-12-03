@@ -31,7 +31,7 @@ image_speed = 0.2;
 state = scr_enemy_idel_state;
 alarm[0] = room_speed*irandom_range(1,4);
 //alarm[2] = room_speed*irandom_range(4,6);
-sight = 200;
+sight = 400;
 target_x = 0;
 target_y = 0;
 </string>
@@ -152,6 +152,13 @@ instance_create(obj_boss.x, obj_boss.y, obj_key);
             <string>///Move towards player
 event_inherited();
 script_execute(state);
+//check the face of the Boss
+if (sign(target_x - x)){
+    sprite_index = spr_boss_right;
+}else{
+    sprite_index = spr_boss;
+}
+
 if(hp &lt;= 0){
     instance_destroy();
 }

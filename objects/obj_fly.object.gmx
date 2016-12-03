@@ -128,6 +128,13 @@ instance_destroy();
             <string>///Move towards player
 event_inherited();
 script_execute(state);
+//check the fase of the fly
+if (sign(target_x - x)){
+    sprite_index = spr_fly_right;
+}else{
+    sprite_index = spr_fly;
+}
+
 if (hp &lt;=0){
     sprite_index = spr_fly_die;
     

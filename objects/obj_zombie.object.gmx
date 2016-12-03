@@ -129,6 +129,11 @@ instance_destroy();
             <string>///Move towards player
 event_inherited();
 script_execute(state);
+if (sign(target_x - x)){
+    sprite_index = spr_zombie_right;
+}else{
+    sprite_index = spr_zombie;
+}
 if (hp &lt;=0){
     sprite_index = spr_zombie_die;
     if(alarm[2] == -1){

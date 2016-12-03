@@ -44,53 +44,5 @@ if (instance_exists(obj_player)){
     }
    
 }
-
-
-
-
-/*
-        // north east
-        else if (d > 20 and d < 80)
-        {
-            sprite_index = spr_female_right
-            //vspeed = -4
-            //hspeed = 4
-            phy_position_x -= 4;
-            phy_position_y += 4;
-        }
-        */
-/*
-        // southeast 
-        else if (d > 290 and d < 360)
-        {
-            sprite_index = spr_female_right
-            //vspeed = 4
-            //hspeed = 4
-            phy_position_x += 4;
-            phy_position_y += 4;
-        } 
-        */
-         /*
-        // southwest
-        else if (d > 190 and d < 270)
-        {
-            sprite_index = spr_female_left
-            //vspeed = 4
-            //hspeed = -4
-            phy_position_x += 4;
-            phy_position_y -= 4;
-        }
-        */
-        /*
-        // northwest
-        else if (d > 100 and d < 170)
-        {
-            sprite_index = spr_female_left
-            //vspeed = -4
-            //hspeed = -4
-            phy_position_x -= 4;
-            phy_position_y -= 4;
-        }
-        */
         
   

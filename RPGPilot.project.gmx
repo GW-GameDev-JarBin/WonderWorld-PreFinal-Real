@@ -144,22 +144,24 @@
     <font>fonts\fnt_small</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_attack</object>
-    <object>objects\obj_dash</object>
-    <object>objects\obj_lever</object>
     <object>objects\obj_start</object>
-    <object>objects\obj_block_wall</object>
     <object>objects\obj_door_1</object>
-    <object>objects\obj_sword</object>
-    <object>objects\obj_training</object>
     <object>objects\obj_damage</object>
     <object>objects\obj_lifeform_parent</object>
-    <object>objects\obj_book</object>
     <object>objects\obj_view</object>
     <object>objects\obj_trap</object>
-    <object>objects\obj_fly</object>
-    <object>objects\obj_zombie</object>
     <object>objects\obj_controller_win</object>
+    <object>objects\obj_pause</object>
+    <object>objects\obj_bg_music</object>
+    <object>objects\obj_block_wall</object>
+    <object>objects\obj_dash_effect</object>
+    <object>objects\obj_gameover</object>
+    <object>objects\obj_multi_touch</object>
+    <object>objects\obj_score</object>
+    <object>objects\obj_play</object>
+    <object>objects\obj_levels</object>
+    <object>objects\obj_replay</object>
+    <object>objects\obj_win_player</object>
     <objects name="level_chooser_buttons">
       <object>objects\obj_maplvl1</object>
       <object>objects\obj_maplvl2</object>
@@ -184,23 +186,27 @@
       <object>objects\obj_controller_level_9</object>
       <object>objects\obj_controller_level_10</object>
     </objects>
-    <object>objects\obj_pause</object>
-    <object>objects\obj_bg_music</object>
-    <object>objects\obj_dash_effect</object>
-    <object>objects\obj_gameover</object>
-    <object>objects\obj_player</object>
-    <object>objects\obj_boss</object>
-    <object>objects\obj_fireball</object>
-    <object>objects\obj_slime</object>
-    <object>objects\obj_multi_touch</object>
-    <object>objects\obj_prince</object>
-    <object>objects\obj_score</object>
-    <object>objects\obj_prince_free</object>
-    <object>objects\obj_key</object>
-    <object>objects\obj_play</object>
-    <object>objects\obj_levels</object>
-    <object>objects\obj_replay</object>
-    <object>objects\obj_win_player</object>
+    <objects name="Characters">
+      <object>objects\obj_fly</object>
+      <object>objects\obj_prince</object>
+      <object>objects\obj_boss</object>
+      <object>objects\obj_slime</object>
+      <object>objects\obj_zombie</object>
+      <object>objects\obj_player</object>
+      <object>objects\obj_prince_free</object>
+    </objects>
+    <objects name="Items">
+      <object>objects\obj_sword</object>
+      <object>objects\obj_training</object>
+      <object>objects\obj_book</object>
+      <object>objects\obj_fireball</object>
+      <object>objects\obj_key</object>
+    </objects>
+    <objects name="JoysticAttackDash">
+      <object>objects\obj_dash</object>
+      <object>objects\obj_attack</object>
+      <object>objects\obj_lever</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_opening</room>
