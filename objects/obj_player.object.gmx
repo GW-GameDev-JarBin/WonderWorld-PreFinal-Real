@@ -82,11 +82,14 @@ if (floor(image_index) == 4 and sprite_index == spr_female_attack_right)
     image_index = 0;
     if (obj_lever.image_index == 0)
     {
+        //image_index = 0;
         image_speed = 0;
         state = scr_move_state;
     }
     else
     {
+        //image_index = 0;
+        obj_player.act = true;
         state = scr_move_state;
     }
    
@@ -106,6 +109,7 @@ if (floor(image_index) == 4 and sprite_index == spr_female_attack_left)
     }
     else
     {
+        obj_player.act = true;
         state = scr_move_state;
     }
 }
@@ -122,6 +126,7 @@ if (floor(image_index) == 4 and sprite_index == spr_female_attack_up)
     }
     else
     {
+        obj_player.act = true;
         state = scr_move_state;
     }
 }
@@ -140,6 +145,7 @@ if (floor(image_index) == 4 and sprite_index == spr_female_attack_down)
     }
     else
     {
+        obj_player.act = true;
         state = scr_move_state;
     }
 }

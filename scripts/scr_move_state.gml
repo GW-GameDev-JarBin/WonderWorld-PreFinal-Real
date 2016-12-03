@@ -1,7 +1,7 @@
 ///player move state
 d = global.dir 
 if (instance_exists(obj_player)){
-    if (obj_player.act = true){
+    if (obj_player.act == true){
     
         //state = scr_attack_state
         //alarm[0] = room_speed * 1.5

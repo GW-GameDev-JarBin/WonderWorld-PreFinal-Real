@@ -13,16 +13,21 @@ if (instance_exists(obj_attack))
 {
     //x = obj_attack.x;
     
-    if point_in_rectangle(touch_previous_x, touch_previous_y, 
+    //if point_in_rectangle(touch_previous_x, touch_previous_y, 
+    //obj_attack.x - 85, obj_attack.y - 85, 
+    //obj_attack.x + 85, obj_attack.y + 85)
+    if point_in_rectangle(touch_x, touch_y, 
     obj_attack.x - 85, obj_attack.y - 85, 
     obj_attack.x + 85, obj_attack.y + 85)
     {
+        //obj_player.image_index = 0;
         // attack button is pressed
-        //obj_player.act = true
+        obj_player.act = false
         if (obj_player.image_speed == 0)
         {
             obj_player.image_speed = 0.2;
         }
+        
         obj_player.state = scr_attack_state;
         script_execute(obj_player.state);
         //state = scr_move_state;
