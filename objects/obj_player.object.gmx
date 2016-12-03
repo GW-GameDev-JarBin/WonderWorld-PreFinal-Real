@@ -39,6 +39,11 @@ right = false
 up = false
 down = false
 can_free = false;
+
+if (instance_exists(obj_lever))
+{
+    obj_lever.image_index = 0;
+}
 //phy_fixed_rotation = true;
 
 
