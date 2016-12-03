@@ -20,14 +20,31 @@
     <sprite>sprites\spr_door_1</sprite>
     <sprite>sprites\spr_door_2</sprite>
     <sprite>sprites\spr_bullet</sprite>
+    <sprite>sprites\spr_damge</sprite>
+    <sprite>sprites\spr_trap</sprite>
+    <sprite>sprites\spr_map</sprite>
+    <sprite>sprites\spr_pause</sprite>
+    <sprite>sprites\spr_resume</sprite>
+    <sprite>sprites\spr_fireball</sprite>
+    <sprite>sprites\spr_prince</sprite>
+    <sprite>sprites\spr_multi_touch</sprite>
+    <sprite>sprites\spr_prince_free</sprite>
+    <sprite>sprites\spr_key</sprite>
+    <sprite>sprites\spr_play</sprite>
+    <sprite>sprites\spr_levels</sprite>
+    <sprite>sprites\spr_replay</sprite>
+    <sprite>sprites\spr_win_player</sprite>
+    <sprites name="Training">
+      <sprite>sprites\spr_training_die</sprite>
+      <sprite>sprites\spr_training</sprite>
+    </sprites>
     <sprites name="Joystick">
       <sprite>sprites\spr_shield</sprite>
       <sprite>sprites\spr_dash</sprite>
       <sprite>sprites\spr_attack</sprite>
       <sprite>sprites\spr_lever</sprite>
     </sprites>
-    <sprite>sprites\spr_damge</sprite>
-    <sprites name="NewPlayerSprite">
+    <sprites name="Player">
       <sprite>sprites\spr_female_attack_down</sprite>
       <sprite>sprites\spr_female_attack_left</sprite>
       <sprite>sprites\spr_female_attack_right</sprite>
@@ -39,25 +56,6 @@
       <sprite>sprites\spr_female_right</sprite>
       <sprite>sprites\spr_female_up</sprite>
     </sprites>
-    <sprite>sprites\spr_trap</sprite>
-    <sprite>sprites\spr_training</sprite>
-    <sprite>sprites\spr_training_die</sprite>
-    <sprite>sprites\spr_map</sprite>
-    <sprite>sprites\spr_pause</sprite>
-    <sprite>sprites\spr_resume</sprite>
-    <sprite>sprites\spr_fireball</sprite>
-    <sprite>sprites\spr_fly</sprite>
-    <sprite>sprites\spr_slime</sprite>
-    <sprite>sprites\spr_slime_die</sprite>
-    <sprite>sprites\spr_boss</sprite>
-    <sprite>sprites\spr_zombie</sprite>
-    <sprite>sprites\spr_prince</sprite>
-    <sprite>sprites\spr_multi_touch</sprite>
-    <sprite>sprites\spr_prince_free</sprite>
-    <sprite>sprites\spr_key</sprite>
-    <sprite>sprites\spr_zombie_die</sprite>
-    <sprite>sprites\spr_play</sprite>
-    <sprite>sprites\spr_levels</sprite>
     <sprites name="spr_level_choosers">
       <sprite>sprites\sprite40_lvl8</sprite>
       <sprite>sprites\sprite41_lvl9</sprite>
@@ -70,9 +68,28 @@
       <sprite>sprites\sprite48_lvl6</sprite>
       <sprite>sprites\sprite49_lvl7</sprite>
     </sprites>
-    <sprite>sprites\spr_replay</sprite>
-    <sprite>sprites\spr_win_player</sprite>
-    <sprite>sprites\spr_fly_die</sprite>
+    <sprites name="Boss">
+      <sprite>sprites\spr_boss</sprite>
+      <sprite>sprites\spr_boss_right</sprite>
+    </sprites>
+    <sprites name="Slime">
+      <sprite>sprites\spr_slime_die_right</sprite>
+      <sprite>sprites\spr_slime_die</sprite>
+      <sprite>sprites\spr_slime_right</sprite>
+      <sprite>sprites\spr_slime</sprite>
+    </sprites>
+    <sprites name="Zombie">
+      <sprite>sprites\spr_zombie_die</sprite>
+      <sprite>sprites\spr_zombie_die_right</sprite>
+      <sprite>sprites\spr_zombie</sprite>
+      <sprite>sprites\spr_zombie_right</sprite>
+    </sprites>
+    <sprites name="Fly">
+      <sprite>sprites\spr_fly</sprite>
+      <sprite>sprites\spr_fly_right</sprite>
+      <sprite>sprites\spr_fly_die</sprite>
+      <sprite>sprites\spr_fly_die_right</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_2</background>
