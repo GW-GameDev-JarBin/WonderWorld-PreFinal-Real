@@ -19,7 +19,10 @@ if (instance_exists(obj_attack))
     {
         // attack button is pressed
         //obj_player.act = true
-        obj_player.image_speed = 0.2;
+        if (obj_player.image_speed == 0)
+        {
+            obj_player.image_speed = 0.2;
+        }
         obj_player.state = scr_attack_state;
         script_execute(obj_player.state);
         //state = scr_move_state;

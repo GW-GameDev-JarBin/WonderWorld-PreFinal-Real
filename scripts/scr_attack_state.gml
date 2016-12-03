@@ -10,7 +10,7 @@ if (instance_exists(obj_player)){
     
     xx = player_x;
     yy = player_y;
-    obj_player.image_speed = 0.2;
+    //obj_player.image_speed = 0.2;
     if (obj_player.sprite_index == spr_female_right)
     {
         var damage = instance_create(xx+45, yy, obj_damage);

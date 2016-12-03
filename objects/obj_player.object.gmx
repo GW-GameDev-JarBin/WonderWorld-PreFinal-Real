@@ -80,7 +80,6 @@ if (floor(image_index) == 4 and sprite_index == spr_female_attack_right)
 {
     sprite_index = spr_female_right;
     image_index = 0;
-    
     if (obj_lever.image_index == 0)
     {
         image_speed = 0;
@@ -90,6 +89,7 @@ if (floor(image_index) == 4 and sprite_index == spr_female_attack_right)
     {
         state = scr_move_state;
     }
+   
     
     
 }
