@@ -10,7 +10,7 @@ if (instance_exists(obj_player)){
                 state = scr_enemy_idel_state;
                 var x_dir = lengthdir_x(1, global.dir);
                 var y_dir = lengthdir_y(1, global.dir);
-                if(obj_boss.sight >= dis){
+                if(sight >= dis){
                     if(alarm[2] <= 0){
                         var fireball = instance_create(obj_boss.x + x_dir,obj_boss.y + y_dir, obj_fireball);
                         alarm[2] = room_speed/2*irandom_range(1,3);
@@ -25,7 +25,7 @@ if (instance_exists(obj_player)){
         target_y = obj_player.y;
     }else{
         state = scr_enemy_idel_state;
-        scr_enemy_chose_next_state();
+        //scr_enemy_chose_next_state();
     }
 }else{
    scr_enemy_chose_next_state(); 

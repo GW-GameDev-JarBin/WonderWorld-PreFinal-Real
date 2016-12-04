@@ -69,6 +69,9 @@ if (instance_exists(obj_player)){
             obj_player.visible = true;
         }
     }
+    
+    
+    obj_player.state = scr_move_state;
 }
     
 

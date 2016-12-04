@@ -142,6 +142,7 @@
   <fonts name="fonts">
     <font>fonts\fnt_game_over</font>
     <font>fonts\fnt_small</font>
+    <font>fonts\fnt_score</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_start</object>

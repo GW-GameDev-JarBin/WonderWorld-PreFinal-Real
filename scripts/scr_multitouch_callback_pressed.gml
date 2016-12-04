@@ -42,7 +42,7 @@ if (instance_exists(obj_dash))
 {
     //x = obj_attack.x;
     
-    if point_in_rectangle(touch_previous_x, touch_previous_y, 
+    if point_in_rectangle(touch_x, touch_y, 
     obj_dash.x - 85, obj_dash.y - 85, 
     obj_dash.x + 85, obj_dash.y + 85)
     {

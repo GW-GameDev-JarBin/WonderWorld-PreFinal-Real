@@ -202,74 +202,6 @@ with other{
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_prince">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-if(can_free){
-    with other{
-    
-        instance_create(x,y,obj_prince_free);
-        instance_destroy();
-        room_goto_next();
-        }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_trap">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///colide
-
-/*
-room_restart();
- with (obj_player)
- {
-    instance_destroy();
- }
- with (obj_dash)
- {
- instance_destroy();
- }
- instance_create(420, 480, obj_player);
- obj_player.visible = true;
-*/
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_book">
       <action>
         <libid>1</libid>
@@ -331,7 +263,7 @@ instance_create(view_xview[0]+1248,view_yview[0]+448, obj_attack)
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_door_1">
+    <event eventtype="4" ename="obj_prince">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -348,12 +280,14 @@ instance_create(view_xview[0]+1248,view_yview[0]+448, obj_attack)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// collide with door
-
-if (room_exists(other.new_room)){
-    room_goto(other.new_room);
-    x = other.new_x;
-    y = other.new_y;
+            <string>
+if(can_free){
+    with other{
+    
+        instance_create(x,y,obj_prince_free);
+        instance_destroy();
+        room_goto_next();
+        }
 }
 </string>
           </argument>
@@ -380,6 +314,72 @@ if (room_exists(other.new_room)){
             <string>// COLLISION
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_trap">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///colide
+
+/*
+room_restart();
+ with (obj_player)
+ {
+    instance_destroy();
+ }
+ with (obj_dash)
+ {
+ instance_destroy();
+ }
+ instance_create(420, 480, obj_player);
+ obj_player.visible = true;
+*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_door_1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// collide with door
+
+if (room_exists(other.new_room)){
+    room_goto(other.new_room);
+    x = other.new_x;
+    y = other.new_y;
+}
 </string>
           </argument>
         </arguments>

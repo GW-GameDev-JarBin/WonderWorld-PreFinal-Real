@@ -188,12 +188,6 @@ if(hp &lt;= 0){
 if (state != scr_enemy_stall_state){
     state = scr_enemy_stall_state;
     alarm[1] = room_speed;
-        with(obj_player){
-            instance_destroy();
-        }
-        room_restart();
-        instance_create(420, 480, obj_player);
-        obj_player.visible = true;
 }
 </string>
           </argument>

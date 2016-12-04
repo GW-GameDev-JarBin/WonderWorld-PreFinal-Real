@@ -128,18 +128,25 @@ instance_destroy();
             <kind>1</kind>
             <string>///Move towards player
 event_inherited();
-script_execute(state);
+
 if (sign(target_x - x)){
     sprite_index = spr_zombie_right;
-}else{
-    sprite_index = spr_zombie;
-}
-if (hp &lt;=0){
+    if (hp &lt;=0){
     sprite_index = spr_zombie_die;
     if(alarm[2] == -1){
         alarm[2] = room_speed/2;    
     }
 }
+}else{
+    sprite_index = spr_zombie;
+    if (hp &lt;=0){
+    sprite_index = spr_zombie_die;
+    if(alarm[2] == -1){
+        alarm[2] = room_speed/2;    
+    }
+}
+}
+script_execute(state);
 </string>
           </argument>
         </arguments>
