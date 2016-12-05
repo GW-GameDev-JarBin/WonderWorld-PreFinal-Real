@@ -216,6 +216,18 @@
       <object>objects\obj_attack</object>
       <object>objects\obj_lever</object>
     </objects>
+    <objects name="LevelNames">
+      <object>objects\obj_lvl1b</object>
+      <object>objects\obj_lvl2b</object>
+      <object>objects\obj_lvl3b</object>
+      <object>objects\obj_lvl4b</object>
+      <object>objects\obj_lvl5b</object>
+      <object>objects\obj_lvl6b</object>
+      <object>objects\obj_lvl7b</object>
+      <object>objects\obj_lvl8b</object>
+      <object>objects\obj_lvl9b</object>
+      <object>objects\obj_lvl10b</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_opening</room>
