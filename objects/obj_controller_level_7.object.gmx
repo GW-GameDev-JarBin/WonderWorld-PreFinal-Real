@@ -63,7 +63,6 @@ if(!instance_exists(obj_bg_music)){
     instance_create(0,0,obj_bg_music);
 }
 
-
 // create traps
 trap_7_1 = instance_create(1104, 448, obj_trap);
 trap_7_2 = instance_create(1104, 1008, obj_trap);
@@ -92,7 +91,17 @@ trap_7_5 = instance_create(3085, 992, obj_trap);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_controller_level_7.trap_7_1){
+            <string>if(!instance_exists(obj_slime)){
+    audio_stop_sound(snd_slime);
+}
+if(!instance_exists(obj_zombie)){
+    audio_stop_sound(snd_zombie);
+}
+if(!instance_exists(obj_fly)){
+    audio_stop_sound(snd_fly);
+}
+
+if (obj_controller_level_7.trap_7_1){
          
     safe_position_x1 = obj_controller_level_7.trap_7_1.phy_position_x - 90;
     safe_position_x2 = obj_controller_level_7.trap_7_1.phy_position_x + 90;

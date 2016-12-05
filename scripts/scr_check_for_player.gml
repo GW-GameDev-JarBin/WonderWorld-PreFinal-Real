@@ -4,7 +4,7 @@ if (instance_exists(obj_player)){
     var dir = point_direction(x,y, obj_player.x, obj_player.y);
     var dis = point_distance(x,y, obj_player.x, obj_player.y);
     if (dis <= sight){
-        //if(instance_exists(obj_boss)){
+        if(instance_exists(obj_boss)){
             
             with(obj_boss){
                 state = scr_enemy_idel_state;
@@ -16,8 +16,9 @@ if (instance_exists(obj_player)){
                         alarm[2] = room_speed/2*irandom_range(1,3);
                     }
                 }
-            //fireball.phy_position_x += (sign(dir)+4);
             }
+        }
+            //fireball.phy_position_x += (sign(dir)+4);
         //}else{
             state = scr_enemy_chase_state;
         //}
@@ -25,7 +26,6 @@ if (instance_exists(obj_player)){
         target_y = obj_player.y;
     }else{
         state = scr_enemy_idel_state;
-        //scr_enemy_chose_next_state();
     }
 }else{
    scr_enemy_chose_next_state(); 

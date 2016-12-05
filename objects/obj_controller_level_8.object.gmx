@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -61,6 +61,7 @@ if(!instance_exists(obj_bg_music)){
     instance_create(0,0,obj_bg_music);
 }
 
+
 trap_8_1 = instance_create(864, 704, obj_trap);
 </string>
           </argument>
@@ -84,7 +85,17 @@ trap_8_1 = instance_create(864, 704, obj_trap);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_controller_level_8.trap_8_1){
+            <string>if(!instance_exists(obj_slime)){
+    audio_stop_sound(snd_slime);
+}
+if(!instance_exists(obj_zombie)){
+    audio_stop_sound(snd_zombie);
+}
+if(!instance_exists(obj_fly)){
+    audio_stop_sound(snd_fly);
+}
+
+if (obj_controller_level_8.trap_8_1){
          
     safe_position_x1 = obj_controller_level_8.trap_8_1.phy_position_x - 90;
     safe_position_x2 = obj_controller_level_8.trap_8_1.phy_position_x + 90;

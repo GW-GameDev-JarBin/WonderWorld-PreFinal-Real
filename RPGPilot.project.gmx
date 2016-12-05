@@ -7,11 +7,16 @@
   <sounds name="sound">
     <sound>sound\snd_game_1</sound>
     <sound>sound\snd_tada</sound>
-    <sound>sound\snd_game_2</sound>
     <sound>sound\snd_sword_swing</sound>
     <sound>sound\snd_dash_sound</sound>
     <sound>sound\snd_ding</sound>
-    <sound>sound\snd_fairy</sound>
+    <sound>sound\snd_slime</sound>
+    <sound>sound\snd_zombie</sound>
+    <sound>sound\snd_fly</sound>
+    <sound>sound\snd_die</sound>
+    <sound>sound\snd_mosnter_follow</sound>
+    <sound>sound\snd_win</sound>
+    <sound>sound\snd_key</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_block_wall</sprite>
@@ -51,6 +56,7 @@
       <sprite>sprites\spr_female_attack_up</sprite>
       <sprite>sprites\spr_axe</sprite>
       <sprite>sprites\spr_book</sprite>
+      <sprite>sprites\spr_book_shadow</sprite>
       <sprite>sprites\spr_female_down</sprite>
       <sprite>sprites\spr_female_left</sprite>
       <sprite>sprites\spr_female_right</sprite>
@@ -108,6 +114,8 @@
   </backgrounds>
   <paths name="paths">
     <path>paths\pth_monster_1</path>
+    <path>paths\pth_book</path>
+    <path>paths\pth_book_fly</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_move_state.gml</script>
